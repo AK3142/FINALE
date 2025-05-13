@@ -1,0 +1,355 @@
+/* --- Color Palette Variables (Cyber Night Dark Theme | Updated) --- */
+:root {
+    --accent: #00f7ff;
+    --accent-secondary: #ff4081;
+    --heading: #f8f8f2;
+    --white: #ffffff;
+    --dark-bg: #0a0f1a;
+    --dark-text: #d0d0d0;
+    --medium-dark-text: #8a8a8a;
+    --dark-section-bg: #131b24;
+    --dark-border: #2c333a;
+}
+
+/* --- Global Styles & Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    padding-top: 110px;
+}
+
+/* --- Container --- */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- Header and Navigation Styling --- */
+header {
+    background-color: var(--dark-section-bg);
+    color: var(--white);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    border-bottom: 4px solid var(--accent-secondary);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2px;
+    font-size: 2.0rem;
+    color: var(--accent);
+}
+
+header p {
+    font-style: normal;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: var(--heading);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 4px;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* --- Section Styling --- */
+section {
+    background-color: var(--dark-section-bg);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    border-left: 5px solid var(--accent);
+    border: 1px solid var(--dark-border);
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--heading);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-secondary);
+    display: inline-block;
+    font-size: 1.6rem;
+}
+
+/* --- About Section Specifics --- */
+#about #profile-pic {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+}
+
+#about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- Skills List Styling --- */
+#skills .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -5px;
+}
+
+#skills .skills-list li {
+    display: inline-block;
+    width: calc(25% - 10px);
+    margin: 5px;
+    background-color: var(--dark-bg);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    min-height: 40px;
+    line-height: 1.3;
+    border: 1px solid var(--dark-border);
+}
+
+/* --- Experience & Projects Styling --- */
+.job, .project {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid var(--dark-border);
+    border-radius: 4px;
+    background-color: #1b1f27;
+}
+
+.job:last-child, .project:last-child {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.job h3, .project h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.date {
+    font-style: normal;
+    color: var(--medium-dark-text);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.job ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.job ul li {
+    margin-bottom: 5px;
+}
+
+.project a.button {
+    display: inline-block;
+    background-color: var(--accent-secondary);
+    color: var(--dark-bg);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.project a.button:hover {
+    background-color: var(--accent);
+    color: var(--dark-bg);
+    border-color: var(--dark-border);
+}
+
+/* --- Awards Section Styling --- */
+#awards .awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+#awards .awards-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+#awards .awards-list li::before {
+    content: '🏆';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-size: 0.9em;
+}
+
+#awards .awards-list li span {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* --- Contact Section Styling --- */
+#contact ul {
+    list-style: none;
+}
+
+#contact ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#contact .icon {
+    margin-right: 10px;
+    color: var(--accent);
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+#contact a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted var(--accent);
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+#contact a:hover {
+    color: var(--accent-secondary);
+    border-bottom-color: var(--accent-secondary);
+}
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px;
+    background-color: var(--dark-section-bg);
+    color: var(--accent);
+    font-size: 0.9rem;
+    border-top: 4px solid var(--accent-secondary);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    #about #profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 120px;
+        height: 120px;
+    }
+
+    #skills .skills-list li {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 160px;
+    }
+
+    header {
+        padding-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 5px;
+        display: inline-block;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    #skills .skills-list li {
+        width: calc(100% - 10px);
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
